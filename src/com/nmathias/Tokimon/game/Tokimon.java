@@ -12,7 +12,8 @@ public class Tokimon {
     private double weight;
     private double strength;
 
-    public Tokimon(String name, String type, double height, double weight, double strength) {   //constructor
+    //constructor
+    public Tokimon(String name, String type, double height, double weight, double strength) {
         this.name = name;
         this.type = type;
         this.height = height;
@@ -20,9 +21,7 @@ public class Tokimon {
         this.strength = strength;
     }
 
-    /*
-    getters and setters
-     */
+    //getters and setters
     public String getName() {
         return name;
     }
@@ -63,6 +62,7 @@ public class Tokimon {
         this.strength = strength;
     }
 
+    // string representation of the Tokimon object
     @Override
     public String toString() {
         return getClass().getName() + " [" +
