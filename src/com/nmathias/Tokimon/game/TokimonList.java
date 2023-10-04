@@ -3,7 +3,7 @@
  * @version 1.0
  * Performs operations on tokimons such as adding and removing tokimons, altering the strength of tokimons, listing ca.sfu.cmpt213.as1.main menu and listing tokimons.
  */
-package com.nmathias.Tokimon.game;
+package src.com.nmathias.Tokimon.game;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,4 +64,76 @@ public class TokimonList {
         }
     }
 
+    /*
+    Add a new Tokimon to the list after enquiring the user about the characteristics of the Tokimon
+    */
+    public static void addNewToki() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter Tokimon's name: ");
+        String name = input.nextLine();
+
+        System.out.print("Enter Tokimon's type: ");
+        String type = input.nextLine();
+
+        System.out.print("Enter Tokimon's height: ");
+        double height = input.nextDouble();
+
+        System.out.print("Enter Tokimon's weight: ");
+        double weight = input.nextDouble();
+
+        Tokimon toki = new Tokimon(name, type, height, weight, 0);
+        tokiList.add(toki);
+    }
+
+    /*
+    Remove the desired Tokimon from the list
+     */
+    public static void deleteToki() {
+        displayAllTokis();
+        System.out.print("(Enter 0 to cancel)");
+
+        System.out.print("Enter the tokimon to be deleted: ");
+        Scanner input = new Scanner(System.in);
+        int option = input.nextInt();
+
+        if (option <= tokiList.size()) {
+            tokiList.remove(option - 1);
+        } else {
+            while (option > tokiList.size() || option <= 0) {
+                System.out.print("Sorry, Wrong input. Try again: ");
+                option = input.nextInt();
+            }
+            tokiList.remove(option - 1);
+        }
+    }
+
+    /*
+    Change the strength of the desired Tokimon
+     */
+    public static void alterToki() {
+        displayAllTokis();
+        System.out.print("(Enter 0 to cancel)");
+
+        Scanner input = new Scanner(System.in);
+        int option = input.nextInt();
+
+        if (option == 0) {
+            return;
+        } else {
+            while (option > tokiList.size() || option < 0) {
+                System.out.print("Wrong input. Please try again: ");
+                option = input.nextInt();
+            }
+            System.out.print("By how much?: ");
+            double str = input.nextDouble();
+            while (str < 0 || str > 100) {
+                System.out.print("Wrong input. Please try again: ");
+                str = input.nextDouble();
+            }
+            tokiList.get(option - 1).setStrength(str);
+            System.out.print("Toki " + tokiList.get(option - 1).getName()
+                    + " now has strength " + str + "!\n");
+        }
+    }
 }

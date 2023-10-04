@@ -3,7 +3,7 @@
  * @version 1.0
  * Tracks the characteristics of tokimons such as name, type, height, weight and strength.
  */
-package com.nmathias.Tokimon.game;
+package src.com.nmathias.Tokimon.game;
 
 public class Tokimon {
     private String name;
