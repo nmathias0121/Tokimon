@@ -3,10 +3,10 @@
  * @version 1.0
  * Provides an interface for the user to add, remove, alter strength, display main menu and list of tokimons.
  */
-package src.com.nmathias.Tokimon.game;
+package src.com.nmathias.Tokimon.java;
 
 import java.util.Scanner;
-import static src.com.nmathias.Tokimon.game.TokimonList.*;
+import static src.com.nmathias.Tokimon.java.TokimonList.*;
 
 public class TokimonUserInterface {
     /*
@@ -50,6 +50,7 @@ public class TokimonUserInterface {
                     }
                     else {
                         show();
+                        isDone = true;
                     }
                     break;
             }

@@ -3,7 +3,7 @@
  * @version 1.0
  * Performs operations on tokimons such as adding and removing tokimons, altering the strength of tokimons, listing ca.sfu.cmpt213.as1.main menu and listing tokimons.
  */
-package src.com.nmathias.Tokimon.game;
+package src.com.nmathias.Tokimon.java;
 
 import java.util.ArrayList;
 import java.util.List;
