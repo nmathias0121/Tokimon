@@ -92,5 +92,8 @@ class TokimonTest {
 
     @org.junit.jupiter.api.Test
     void testToString() {
+        Tokimon t3 = new Tokimon("Rtoki", "gold", 166, 77,40);
+
+        assertEquals(t3.toString(), "src.com.nmathias.Tokimon.java.Tokimon [Name='Rtoki', Type='gold', Height=166.0, Weight=77.0, Strength=40.0]");
     }
 }
