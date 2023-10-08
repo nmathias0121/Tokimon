@@ -45,6 +45,17 @@ class TokimonTest {
 
     @org.junit.jupiter.api.Test
     void getWeight() {
+        // negative weight
+        Tokimon t1 = new Tokimon("Btoki", "selenium", 166, -20,150);
+        assertEquals(t1.getWeight(),15);
+
+        // zero weight
+        Tokimon t2 = new Tokimon("Btoki", "selenium", 166, 0,150);
+        assertEquals(t2.getWeight(),15);
+
+        // positive weight
+        Tokimon t3 = new Tokimon("Qtoki", "selenium", 166, 77,150);
+        assertEquals(t3.getWeight(),77);
     }
 
     @org.junit.jupiter.api.Test

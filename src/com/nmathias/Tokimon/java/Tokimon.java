@@ -9,7 +9,7 @@ public class Tokimon {
     private String name;
     private String type;
     private double height;          // minimum height is 25 cm
-    private double weight;
+    private double weight;          // minimum weight is 15 kgs
     private double strength;
 
     //constructor
@@ -22,7 +22,11 @@ public class Tokimon {
         else
             this.height = height;
 
-        this.weight = weight;
+        if(weight <= 15)
+            this.weight = 15;
+        else
+            this.weight = weight;
+
         this.strength = strength;
     }
 
