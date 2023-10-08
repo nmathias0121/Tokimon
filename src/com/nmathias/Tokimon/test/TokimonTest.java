@@ -30,20 +30,17 @@ class TokimonTest {
 
     @org.junit.jupiter.api.Test
     void getHeight() {
-        /*
         // negative height
         Tokimon t1 = new Tokimon("Btoki", "selenium", -34, 77,150);
-        assertEquals(t1.getHeight(),166);
+        assertEquals(t1.getHeight(),25);
 
         // zero height
-        Tokimon t1 = new Tokimon("Btoki", "selenium", 0, 77,150);
-        assertEquals(t1.getHeight(),166);
-        */
-
+        Tokimon t2 = new Tokimon("Btoki", "selenium", 0, 77,150);
+        assertEquals(t2.getHeight(),25);
 
         // positive height
-        Tokimon t2 = new Tokimon("Qtoki", "selenium", 166, 77,150);
-        assertEquals(t2.getHeight(),166);
+        Tokimon t3 = new Tokimon("Qtoki", "selenium", 166, 77,150);
+        assertEquals(t3.getHeight(),166);
     }
 
     @org.junit.jupiter.api.Test

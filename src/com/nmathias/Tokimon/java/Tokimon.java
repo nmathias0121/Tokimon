@@ -8,7 +8,7 @@ package src.com.nmathias.Tokimon.java;
 public class Tokimon {
     private String name;
     private String type;
-    private double height;
+    private double height;          // minimum height is 25 cm
     private double weight;
     private double strength;
 
@@ -16,7 +16,12 @@ public class Tokimon {
     public Tokimon(String name, String type, double height, double weight, double strength) {
         this.name = name;
         this.type = type;
-        this.height = height;
+
+        if(height <= 25)
+            this.height = 25;
+        else
+            this.height = height;
+
         this.weight = weight;
         this.strength = strength;
     }
