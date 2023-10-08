@@ -60,10 +60,34 @@ class TokimonTest {
 
     @org.junit.jupiter.api.Test
     void getStrength() {
+        // negative strength
+        Tokimon t1 = new Tokimon("Btoki", "selenium", 166, 77,-150);
+        assertEquals(t1.getStrength(),-150);
+
+        // zero strength
+        Tokimon t2 = new Tokimon("Btoki", "selenium", 166, 77,0);
+        assertEquals(t2.getStrength(),0);
+
+        // positive strength
+        Tokimon t3 = new Tokimon("Qtoki", "selenium", 166, 77,150);
+        assertEquals(t3.getStrength(),150);
     }
 
     @org.junit.jupiter.api.Test
     void setStrength() {
+        Tokimon t1 = new Tokimon("Qtoki", "selenium", 166, 77,0);
+        t1.setStrength(-150);
+
+        Tokimon t2 = new Tokimon("Qtoki", "selenium", 166, 77,0);
+        t2.setStrength(40);
+
+        Tokimon t3 = new Tokimon("Qtoki", "selenium", 166, 77,0);
+        t3.setStrength(0);
+
+        assertEquals(t1.getStrength(), -150);
+        assertEquals(t2.getStrength(), 40);
+        assertEquals(t3.getStrength(), 0);
+
     }
 
     @org.junit.jupiter.api.Test
