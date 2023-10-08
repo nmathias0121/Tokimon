@@ -93,7 +93,7 @@ public class TokimonList {
         displayAllTokis();
         System.out.print("(Enter 0 to cancel)");
 
-        System.out.print("Enter the tokimon to be deleted: ");
+        System.out.print("Enter the tokimon number to be deleted: ");
         Scanner input = new Scanner(System.in);
         int option = input.nextInt();
 
